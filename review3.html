@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_review3</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/review3.css">
+    <link rel="stylesheet" href="xeicon/css/xeicon.min.css">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <h2><a href="index.php" class="logo">Moogo</a></h2>
+
+        <form action="#" class="search">
+            <input type="text" placeholder="Movie name / Director / Country / Genre ...">
+            <button type="submit"><i class="xi-search"></i></button>
+        </form>
+
+        <div class="category">            
+            <ul>
+                <li><a href="#" id="menu-btn">Menu</a></li>
+                <li><a href="list.php">Request</a></li>
+                <!-- <li><?php include "top_login1.php"; ?></li> -->
+
+                <li>
+                    <?php
+                        session_start();
+                        include "top_login1.php";
+                    ?>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <nav class="menu">
+        <ul class="menu1">
+            <a href="#" class="close">Close Menu</a>
+
+            <li>
+                <a href="#" class="menu-t">
+                    Films <i class="xi-angle-down-thin"></i>
+                </a>
+                <ul class="sub">
+                    <li><a href="menu_nowshowing.html">Now Showing</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Director</a></li>
+                    <li><a href="#">Country / Language</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Genres</a>
+                <a href="#"><i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Romance / Comedy</a></li>
+                    <li><a href="#">Fantasy / SF</a></li>
+                    <li><a href="#">Etc</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Articles / News <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Film Articles</a></li>
+                    <li><a href="#">Film Magazines</a></li>
+                </ul>
+            </li>
+
+            <li class="mypage"><a href="#" class="menu-t">My Page <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Recommendation</a></li>
+                    <li class="last"><a href="#">My Request</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <h3>Film info</h3>
+    <div class="review">
+        <div class="film">
+            <a href="#">
+                <img src="img/review-3.jpg" alt="review3">
+                <p class="f-title">Teenage Zombies</p>
+                <p class="f-plot">
+                    A crazed female scientist use nerve gas to turn local teenagers into her unquestioning slaves.
+                </p>
+            </a>
+
+            <ul class="genre">
+                <li><a href="#">Horror</a></li>
+                <li><a href="#">Sci-Fi</a></li>
+            </ul>
+        </div>
+
+
+        <div class="review-list">
+            <h4>User Reviews</h4>
+            <ul>
+                <li>
+                    <ul class="user-review review-list1">
+                        <li class="name">User Name 1</li>
+                        <li class="date"><small>Written on 16 July, 2025</small></li>
+                        <li class="small"><small>2.5/5 <i class="xi-star"></i></small></li>
+                        <li class="text">
+                            "A screenwriter invites his producer's to an old dark house. He's paid a bunch of actors to act out his play so that the producer will put up the money but soon a real killer starts to stalk them."
+                        </li>
+                    </ul>
+
+                    <ul class="user-review review-list2">
+                        <li class="name">User Name 2</li>
+                        <li class="date"><small>Written on 8 August, 2025</small></li>
+                        <li class="small"><small>3/5 <i class="xi-star"></i></small></li>
+                        <li class="text">
+                            "Enjoyment of this film will depend on whether you like the star James Dunn or not. Dunn who plays Trayne our hero made a lot of B-movies in the in the 30's and 40's."
+                        </li>
+                    </ul>
+
+
+                    <ul class="user-review review-list3">
+                        <li class="name">User Name 3</li>
+                        <li class="date"><small>Written on 23 October, 2024</small></li>
+                        <li class="small"><small>2/5 <i class="xi-star"></i></small></li>
+                        <li class="text">
+                            "Over all its not bad, but its not all that great either. Worth a look if you have a second film on tap for the evening, or if you come across this at 2am on some TV station that still runs old movie all night long."
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button>+More</button>
+        </div>
+    </div>
+    
+
+
+    <footer id="footer">
+
+        <div class="footbox">
+            <a href="index.php" class="footlogo">Moogo</a>
+
+            <ul class="footmenu">
+
+                <li class="f-title">Contact
+                    <ul>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=seohee1880@gmail.com" target="_blank">E-mail</a></li>
+                        <li><a href="tel:010-4555-9620">Tel (+82)10 4555 9620</a></li>
+                    </ul>
+                </li>
+
+                <li class="f-title">Sns
+                    <ul>
+                        <li><a href="https://www.instagram.com/vanillaskyexpress" target="_blank">Instagram</a></li>
+                        <li><a href="https://kr.pinterest.com/seohee1880/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://blog.naver.com/sag1880" target="_blank">Blog</a></li>
+                    </ul>
+                </li>
+
+                <li class="copyf-title">&copy; Moogo
+                    <ul>
+                        <li><small class="cr">All Rights Reserved.</small></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>

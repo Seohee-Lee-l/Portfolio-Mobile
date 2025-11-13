@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_request</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/request.css">
+    <link rel="stylesheet" href="xeicon/css/xeicon.min.css">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <h2><a href="index.php" class="logo">Moogo</a></h2>
+
+        <form action="#" class="search">
+            <input type="text" placeholder="Movie name / Director / Country / Genre ...">
+            <button type="submit"><i class="xi-search"></i></button>
+        </form>        
+        
+        <div class="category">            
+            <ul>
+                <li><a href="#" id="menu-btn">Menu</a></li>
+                <li><a href="list.php">Request</a></li>
+                <!-- <li><?php include "top_login1.php"; ?></li> -->
+
+                <li>
+                    <?php
+                        session_start();
+                        include "top_login1.php";
+                    ?>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <nav class="menu">
+        <ul class="menu1">
+            <a href="#" class="close">Close Menu</a>
+
+            <li>
+                <a href="#" class="menu-t">
+                    Films <i class="xi-angle-down-thin"></i>
+                </a>
+                <ul class="sub">
+                    <li><a href="menu_nowshowing.html">Now Showing</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Director</a></li>
+                    <li><a href="#">Country / Language</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Genres</a>
+                <a href="#"><i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Romance / Comedy</a></li>
+                    <li><a href="#">Fantasy / SF</a></li>
+                    <li><a href="#">Etc</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Articles / News <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Film Articles</a></li>
+                    <li><a href="#">Film Magazines</a></li>
+                </ul>
+            </li>
+
+            <li class="mypage"><a href="#" class="menu-t">My Page <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Recommendation</a></li>
+                    <li class="last"><a href="#">My Request</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <section class="request-film">
+        <h4>Request a Film</h4>
+
+        <form action="#" method="post" class="request-form">
+            <label for="title">Film Title
+                <input type="text" id="title" name="title" required>
+            </label>
+
+            <label for="director">Director
+                <input type="text" name="director" id="director" required>
+            </label>
+
+            <label for="country_language">Country / Language
+                <input type="text" name="country/language" id="country_language">
+            </label>
+
+            <label for="release_year">Release Year
+                <input type="number" id="release_year" name="year" min="1900" max="2999" required>
+            </label>
+
+            <label for="link">Optional Link (Trailer, IMDB ...)
+                <input type="url" name="link" id="link">
+            </label>
+
+            <label for="name">Your Name (Optional)
+                <input type="text" id="name" name="name">
+            </label>
+
+            <label for="email">Your E-mail (For non-members)
+                <input type="email" name="email" id="email">
+            </label>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+
+
+
+
+    <footer id="footer">
+
+        <div class="footbox">
+            <a href="index.php" class="footlogo">Moogo</a>
+
+            <ul class="footmenu">
+
+                <li class="f-title">Contact
+                    <ul>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=seohee1880@gmail.com" target="_blank">E-mail</a></li>
+                        <li><a href="tel:010-4555-9620">Tel (+82)10 4555 9620</a></li>
+                    </ul>
+                </li>
+
+                <li class="f-title">Sns
+                    <ul>
+                        <li><a href="https://www.instagram.com/vanillaskyexpress" target="_blank">Instagram</a></li>
+                        <li><a href="https://kr.pinterest.com/seohee1880/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://blog.naver.com/sag1880" target="_blank">Blog</a></li>
+                    </ul>
+                </li>
+
+                <li class="copyf-title">&copy; Moogo
+                    <ul>
+                        <li><small class="cr">All Rights Reserved.</small></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>

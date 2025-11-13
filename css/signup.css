@@ -1,0 +1,280 @@
+@charset "utf-8";
+@font-face {font-family: "Modern Sans"; src: url(../font/modern_sans/ModernSans-Light.otf);}
+
+*, *::before, *::after {box-sizing: border-box;}
+a {text-decoration: none; font-family: "Modern Sans";}
+body {font-family: "Modern Sans"; min-height: 100vh; overflow-x: hidden;}
+
+
+/* header */
+#header {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid rgb(144, 170, 139);
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem;
+}
+
+.category ul {
+    display: flex;
+    gap: 1rem;
+}
+
+#header h2 a {
+    display: block;
+    color: rgb(144, 170, 139);
+    font: bold 15px "Modern Sans";
+    line-height: 55px;
+}
+
+#header .category a {
+    color: #666;
+    font: normal 12px "Modern Sans";
+    padding: 0.1rem;
+    transition: all .4s ease;
+}
+
+.category ul li a:hover {
+    color: #fff !important;
+    background: #90aa8b;
+    transition: all .4s ease;
+    padding: 0.1rem;
+}
+
+.search {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(139, 139, 139, 0.4);
+    margin: 0;
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    padding-right: 24px;
+}
+
+.search input::placeholder {
+    color: #aaa;
+    font: normal 8px "Modern Sans";
+}
+
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* menu */
+.menu {
+    position: fixed;
+    left: 0;
+    /* top: 0; */
+    top: -100%;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #fbffee;
+    overflow-y: auto;
+}
+
+.menu .menu-close {
+    width: 95%;
+    margin: 1rem auto 2rem;
+}
+
+.menu .menu-close a {
+    color: #222;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: block;
+    transition: all .4s ease;
+}
+
+.menu .menu-close a:hover {
+    color: #90aa8b;
+}
+
+.menu .menu-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.menu .menu-container .menu1 li {
+    margin-bottom: 10%;
+}
+
+.menu .menu-container .menu1 li .menu-t {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.menu .menu-container .menu1 li .menu-t::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -0.6rem;
+    width: 0%;
+    height: 2px;
+    background: #90aa8b;
+    transition: all .4s ease;
+}
+
+.menu .menu-container .menu1 li .menu-t:hover::after {
+    width: 90%;
+}
+
+.menu .menu-container .menu1 li .menu-t p {
+    font-size: 3rem;
+    color: #333;
+    display: block;
+}
+
+.menu .menu-container .menu1 li .menu-t i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.menu .menu-container .menu1 .sub {
+    display: none;
+    width: 98%;
+    margin: 0.6rem auto;
+}
+
+.menu .menu-container .menu1 .sub li {
+    width: 80%;
+    margin: 1rem auto;
+    padding-bottom: 0.5rem;
+}
+
+.menu .menu-container .menu1 .sub li a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #555555;
+    transition: all .4s ease;
+    display: block;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid transparent;
+}
+
+.menu .menu-container .menu1 .sub li a:hover {
+    background: rgba(144, 170, 139, 0.4);
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+
+
+/* signup */
+#signup {padding-bottom: 2rem;}
+.signup-container {padding-top: 55px; width: 80%; margin: 3rem auto; max-width: 500px;}
+.signup-container form legend {font-weight: bold; font-size: 24px; color: #90aa8b; padding-bottom: 1rem;}
+.signup-container form label {font-size: 14px; color: #222; display: flex; padding-bottom: 0.5rem; width: 120px; flex-shrink: 0;}
+.signup-container form input {margin-bottom: 1rem; border: none; border-bottom: 1px solid #bbb; outline: none; flex: 1;}
+.signup-container form input::placeholder {color: #aaa; font-size: 10px; font-family: "Modern Sans";}
+
+fieldset div {margin-bottom: 0.5rem;}
+
+.form-list {display: flex; gap: 2rem; align-items: start;}
+
+.birth-list input {display: block; width: 50%;}
+
+.address-list input {display: block;}
+
+#username {position: relative;}
+
+/* 버튼 공통 스타일 */
+.join {
+    border: 1px solid #90aa8b; 
+    background: #90aa8b; 
+    padding: 8px 16px; 
+    color: #fff; 
+    font-size: 10px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* ID/Email 체크 버튼 스타일 */
+.id-check {
+    justify-content: flex-end !important;
+    margin-bottom: 0.5rem;
+}
+
+.id-check .join {
+    flex: 0 0 auto;
+    min-width: 80px;
+}
+
+/* 버튼 그룹 스타일 */
+.button-group {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.button-group .join {
+    flex: 0 0 auto;
+    min-width: 80px;
+}
+
+/* 일반 form-list 스타일 */
+.form-list:not(.button-group) {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+
+.agree-check {width: 100%; margin-top: 1.5rem;}
+.agree-check label {display: flex; align-items: self-start; gap: 0.2rem;}
+
+.agree-check span {font-size: 11px; color: #333; white-space: nowrap; position: relative;}
+.agree-check .small {display: block; font-size: 8px; color: #999; margin-left: 2rem; position: relative; top: -1.7rem;}
+
+
+
+
+
+
+/* footer */
+#footer {width: 100%; height: 150px; background: #90aa8b; padding-bottom: 1.5rem;}
+#footer .footbox {display: flex; gap: 5rem; padding-top: 1rem; justify-content: space-around;}
+#footer .footbox .footmenu {display: flex; gap: 2rem; align-items: start;}
+
+#footer .footlogo {font-weight: bold; padding-left: 5%; font-size: 15px; color: #fff;}
+#footer .f-title {color: #fff; font-size: 13px;}
+
+#footer .f-title li a {color: #fff; font-size: 9px;}
+#footer .f-title li a:hover {background: #fff; color: #90aa8b;}
+
+
+.copyf-title {color: #fff; font-size: 10px;}
+
+
+
+/* scroll bar */
+::-webkit-scrollbar {width: 10px; height: 6px;}
+
+::-webkit-scrollbar-track {background: #f5f5f5; border-radius: 10px;}
+
+::-webkit-scrollbar-thumb {background-color: #90aa8b; border-radius: 10px; border: 1px solid #dcdcdc;}
+
+::-webkit-scrollbar-thumb:hover {background-color: #6f8969;}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_bestnow2</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bestnow2.css">
+    <link rel="stylesheet" href="xeicon/css/xeicon.min.css">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <h2><a href="index.php" class="logo">Moogo</a></h2>
+
+        <form action="#" class="search">
+            <input type="text" placeholder="Movie name / Director / Country / Genre ...">
+            <button type="submit"><i class="xi-search"></i></button>
+        </form>
+
+        <div class="category">            
+            <ul>
+                <li><a href="#" id="menu-btn">Menu</a></li>
+                <li><a href="list.php">Request</a></li>
+                <li>
+                    <?php
+                        session_start();
+                        include "top_login1.php";
+                    ?>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <nav class="menu">
+        <ul class="menu1">
+            <a href="#" class="close">Close Menu</a>
+
+            <li>
+                <a href="#" class="menu-t">
+                    Films <i class="xi-angle-down-thin"></i>
+                </a>
+                <ul class="sub">
+                    <li><a href="menu_nowshowing.html">Now Showing</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Director</a></li>
+                    <li><a href="#">Country / Language</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Genres</a>
+                <a href="#"><i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Romance / Comedy</a></li>
+                    <li><a href="#">Fantasy / SF</a></li>
+                    <li><a href="#">Etc</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Articles / News <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Film Articles</a></li>
+                    <li><a href="#">Film Magazines</a></li>
+                </ul>
+            </li>
+
+            <li class="mypage"><a href="#" class="menu-t">My Page <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Recommendation</a></li>
+                    <li class="last"><a href="#">My Request</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="now">
+        <div class="now1">
+            <ul class="film-info">
+                <li><a href="#" target="_blank"><img src="img/best2.jpg" alt="best2"></a>
+                    <ul class="film1">
+                        <li class="f-title">Doctor Blood's Coffin</li>
+                        <li class="f-year">1961</li>
+                        <li><a href="#">+ watchlist</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="rating">
+            <h4>Rate</h4>
+            <div class="r-wrapper">
+                <ul>
+                    <li>Average rating
+                        <ul class="star">
+                            <li><span>3.4</span> / 5 <i class="xi-star"></i></li>
+                        </ul>
+                    </li>
+
+                    <li>Expected rating
+                        <ul class="star">
+                            <li><span>3.7</span> / 5 <i class="xi-star"></i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="genre">
+            <ul>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Horror</a></li>
+                <li><a href="#">Mystery</a></li>
+                <li><a href="#">Sci-Fi</a></li>
+                <li><a href="#">Thriller</a></li>
+            </ul>
+        </div>
+
+        <div class="ss">
+            <h4>Synopsys</h4>
+            <p>
+                Strange crimes are occurring in Cornwall. Doctors' surgeries are becoming burgled, and people are disappearing. No one knows it yet, but the stolen medical supplies have been used to set up a laboratory in the disused Porthcarron Tin Mine, and the missing people have been taken there after being immobilised with a drug.
+            </p>
+        </div>
+
+        <div class="f-info">
+            <ul>
+                <li class="list-t">Director</li>
+                <li><a href="#">Sidney J.Furie</a></li>
+            </ul>
+
+            <ul>
+                <li class="list-t">Writers</li>
+                <li><a href="#">Nathan Juran</a></li>
+                <li><a href="#">James Kelley</a></li>
+                <li><a href="#">Peter Miller</a></li>
+            </ul>
+
+            <ul>
+                <li class="list-t">Stars</li>
+                <li><a href="#">Kieron Moore</a></li>
+                <li><a href="#">Hazel Court</a></li>
+                <li><a href="#">Ian Hunter</a></li>
+            </ul>
+
+            <ul>
+                <li class="country"><a href="#">United Kingdom</a></li>
+                <li class="language"><a href="#">English</a></li>
+            </ul>
+        </div>
+
+
+        <div class="review">
+            <h4>User Reviews</h4>
+
+            <ul>
+                <li class="name">User name</li>
+                <li class="date">Written on July 15, 2025</li>
+                <li class="review-c">
+                    "This is a true story...
+
+It's known to the Police Department of one of our largest cities as the most difficult homicide case in its experience. Principally because of the diabolical cleverness, intelligence and cunning of a completely unknown killer....."
+                </li>
+            </ul>
+
+            <ul>
+                <li class="name">User name</li>
+                <li class="date">Written on September 05, 2024</li>
+                <li class="review-c">
+                    "Richard Basehart shoots down an LAPD officer one night after the offduty patrolman stops him for some suspicious activity. The officer who paid with his life had every reason to be suspicious, Basehart was attempting to break into an electronics store."
+                </li>
+            </ul>
+
+            <ul class="review-last">
+                <li class="name">User name</li>
+                <li class="date">Written on February 16, 2025</li>
+                <li class="review-c">
+                    "Watching this movie, which is very good if dated, I thought of The Third Man, too. But it was made BEFORE the Carol Reed film, so can hardly be said to have borrowed heavily from it."
+                </li>
+            </ul>
+
+            <button>+More</button>
+        </div>
+
+    </div>    
+
+
+    <footer id="footer">
+
+        <div class="footbox">
+            <a href="index.php" class="footlogo">Moogo</a>
+
+            <ul class="footmenu">
+
+                <li class="f-title">Contact
+                    <ul>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=seohee1880@gmail.com" target="_blank">E-mail</a></li>
+                        <li><a href="tel:010-4555-9620">Tel (+82)10 4555 9620</a></li>
+                    </ul>
+                </li>
+
+                <li class="f-title">Sns
+                    <ul>
+                        <li><a href="https://www.instagram.com/vanillaskyexpress" target="_blank">Instagram</a></li>
+                        <li><a href="https://kr.pinterest.com/seohee1880/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://blog.naver.com/sag1880" target="_blank">Blog</a></li>
+                    </ul>
+                </li>
+
+                <li class="copyf-title">&copy; Moogo
+                    <ul>
+                        <li><small class="cr">All Rights Reserved.</small></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_genre2</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/genre.css">
+    <link rel="stylesheet" href="xeicon/css/xeicon.min.css">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <h2><a href="index.php" class="logo">Moogo</a></h2>
+
+        <form action="#" class="search">
+            <input type="text" placeholder="Movie name / Director / Country / Genre ...">
+            <button type="submit"><i class="xi-search"></i></button>
+        </form>
+
+        <div class="category">            
+            <ul>
+                <li><a href="#" id="menu-btn">Menu</a></li>
+                <li><a href="list.php">Request</a></li>
+                <li>
+                    <?php
+                        session_start();
+                        include "top_login1.php";
+                    ?>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <nav class="menu">
+        <ul class="menu1">
+            <a href="#" class="close">Close Menu</a>
+
+            <li>
+                <a href="#" class="menu-t">
+                    Films <i class="xi-angle-down-thin"></i>
+                </a>
+                <ul class="sub">
+                    <li><a href="menu_nowshowing.html">Now Showing</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Director</a></li>
+                    <li><a href="#">Country / Language</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Genres</a>
+                <a href="#"><i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Romance / Comedy</a></li>
+                    <li><a href="#">Fantasy / SF</a></li>
+                    <li><a href="#">Etc</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Articles / News <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Film Articles</a></li>
+                    <li><a href="#">Film Magazines</a></li>
+                </ul>
+            </li>
+
+            <li class="mypage"><a href="#" class="menu-t">My Page <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Recommendation</a></li>
+                    <li class="last"><a href="#">My Request</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section class="genre">
+
+        <div class="background">
+            <img src="img/drama-background.jpg" alt="background-image">
+        </div>
+
+        <div class="drama">
+            <ul>
+                <li><strong>Drama</strong></li>
+                <li class="txt">
+                    The drama genre is a broad category that features storeis portraying human experiences, emotions, conflicts, and relationships in a realistic and emotionally impactful way. Dramas delve into the complexities of human life, often exploring themse of love, loss, morality, societal issues, personal growth, with the aim to evoke an emotional reponse from the audience by presenting relatable and thought-provoking stories.
+            </ul>
+
+            <div class="button2">
+                <a href="#">More genres</a>
+            </div>
+        </div>
+
+        <div class="drama-film">
+            <h4>Drama Film</h4>
+
+
+            <ul class="drama-list">
+                <li>
+                    <a href="#">
+                        <img src="img/drama-1.jpg" alt="drama-mv1">
+
+                        <div class="overlay-text">
+                            <h4 class="title">12 Angry Men 1957</h4>
+                            <p class="dr-d">Directed by Sidney Lumet</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="img/drama-2.jpg" alt="drama-mv2">
+
+                        <div class="overlay-text">
+                            <h4 class="title">The Maltese Falcon 1941</h4>
+                            <p class="dr-d">Directed by John Huston</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="img/drama-3.jpg" alt="drama-mv3">
+
+                        <div class="overlay-text">
+                            <h4 class="title">Ikiru 1952</h4>
+                            <p class="dr-d">Directed by Akira Kurosawa</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="img/drama-4.jpg" alt="drama-mv4">
+
+                        <div class="overlay-text">
+                            <h4 class="title">Citizen Kane 1941</h4>
+                            <p class="dr-d">Directed by Orson Welles</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        <div class="button1">
+            <a href="#">See all drama films</a>
+        </div>
+
+        
+    </section>
+    
+
+
+    <footer id="footer">
+
+        <div class="footbox">
+            <a href="index.php" class="footlogo">Moogo</a>
+
+            <ul class="footmenu">
+
+                <li class="f-title">Contact
+                    <ul>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=seohee1880@gmail.com" target="_blank">E-mail</a></li>
+                        <li><a href="tel:010-4555-9620">Tel (+82)10 4555 9620</a></li>
+                    </ul>
+                </li>
+
+                <li class="f-title">Sns
+                    <ul>
+                        <li><a href="https://www.instagram.com/vanillaskyexpress" target="_blank">Instagram</a></li>
+                        <li><a href="https://kr.pinterest.com/seohee1880/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://blog.naver.com/sag1880" target="_blank">Blog</a></li>
+                    </ul>
+                </li>
+
+                <li class="copyf-title">&copy; Moogo
+                    <ul>
+                        <li><small class="cr">All Rights Reserved.</small></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>

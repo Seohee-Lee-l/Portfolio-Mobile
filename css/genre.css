@@ -1,0 +1,434 @@
+@charset "utf-8";
+@font-face {font-family: "Modern Sans"; src: url(../font/modern_sans/ModernSans-Light.otf);}
+
+*, *::before, *::after {box-sizing: border-box;}
+a {text-decoration: none; font-family: "Modern Sans";}
+body {font-family: "Modern Sans";}
+
+
+/* header */
+#header {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid rgb(144, 170, 139);
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem;
+}
+
+.category ul {
+    display: flex;
+    gap: 1rem;
+}
+
+#header h2 a {
+    display: block;
+    color: rgb(144, 170, 139);
+    font: bold 15px "Modern Sans";
+    line-height: 55px;
+}
+
+#header .category a {
+    color: #666;
+    font: normal 12px "Modern Sans";
+    padding: 0.1rem;
+    transition: all .4s ease;
+}
+
+.category ul li a:hover {
+    color: #fff !important;
+    background: #90aa8b;
+    transition: all .4s ease;
+    padding: 0.1rem;
+}
+
+.search {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(139, 139, 139, 0.4);
+    margin: 0;
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    padding-right: 24px;
+}
+
+.search input::placeholder {
+    color: #aaa;
+    font: normal 8px "Modern Sans";
+}
+
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* menu */
+.menu {
+    position: fixed;
+    left: 0;
+    /* top: 0; */
+    top: -100%;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #fbffee;
+    overflow-y: auto;
+}
+
+.menu .menu-close {
+    width: 95%;
+    margin: 1rem auto 2rem;
+}
+
+.menu .menu-close a {
+    color: #222;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: block;
+    transition: all .4s ease;
+}
+
+.menu .menu-close a:hover {
+    color: #90aa8b;
+}
+
+.menu .menu-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.menu .menu-container .menu1 li {
+    margin-bottom: 10%;
+}
+
+.menu .menu-container .menu1 li .menu-t {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.menu .menu-container .menu1 li .menu-t::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -0.6rem;
+    width: 0%;
+    height: 2px;
+    background: #90aa8b;
+    transition: all .4s ease;
+}
+
+.menu .menu-container .menu1 li .menu-t:hover::after {
+    width: 90%;
+}
+
+.menu .menu-container .menu1 li .menu-t p {
+    font-size: 3rem;
+    color: #333;
+    display: block;
+}
+
+.menu .menu-container .menu1 li .menu-t i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.menu .menu-container .menu1 .sub {
+    display: none;
+    width: 98%;
+    margin: 0.6rem auto;
+}
+
+.menu .menu-container .menu1 .sub li {
+    width: 80%;
+    margin: 1rem auto;
+    padding-bottom: 0.5rem;
+}
+
+.menu .menu-container .menu1 .sub li a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #555555;
+    transition: all .4s ease;
+    display: block;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid transparent;
+}
+
+.menu .menu-container .menu1 .sub li a:hover {
+    background: rgba(144, 170, 139, 0.4);
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+
+/* genre - action */
+.genre {overflow: auto;}
+.background {padding-top: 65px; text-align: center; width: 100%;}
+.background img {width: 100%; height: auto; display: block;}
+
+.action {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.action li strong {font-size: 20px; color: #90aa8b;}
+.action li {margin-bottom: 0.5rem;}
+.action .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.action-film {width: 90%; margin: 1.5rem auto;}
+.action-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.action-list {display: flex; overflow: auto; justify-content: space-around;}
+.action-list img {width: 100%; height: auto; display: block;}
+.action-list .title {display: block; font-weight: bold; font-size: 11px;}
+.action-list .ac-d {display: block; font-size: 8px;}
+
+.action-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.action-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.action-list a:hover::before {opacity: 1;}
+
+.action-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.action-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.action-list img {width: 100%; height: auto; display: block;}
+
+
+.button1 {margin-top: 1rem; display: block; display: flex; justify-content: end;}
+.button1 a {border: 1px solid #90aa8b; color: #fff; background: #90aa8b; padding: 5px; font-size: 12px; transition: .6s ease;}
+.button1 a:hover {background: #fff; color: #90aa8b;}
+
+
+.button2 {display: block; display: flex; justify-content: end; margin-top: 0.7rem;}
+.button2 a {border: 1px solid #90aa8b; color: #fff; background: #90aa8b; padding: 5px; font-size: 12px; transition: .6s ease;}
+.button2 a:hover {background: #fff; color: #90aa8b;}
+
+
+
+
+
+/* genre - drama */
+
+.drama {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.drama li strong {font-size: 20px; color: #90aa8b;}
+.drama li {margin-bottom: 0.5rem;}
+.drama .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.drama-film {width: 90%; margin: 1.5rem auto;}
+.drama-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.drama-list {display: flex; overflow: auto; justify-content: space-around;}
+.drama-list img {width: 100%; height: auto; display: block;}
+.drama-list .title {display: block; font-weight: bold; font-size: 11px;}
+.drama-list .dr-d {display: block; font-size: 8px;}
+
+.drama-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.drama-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.drama-list a:hover::before {opacity: 1;}
+
+.drama-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.drama-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.drama-list img {width: 100%; height: auto; display: block;}
+
+
+
+
+/* genre - horror */
+
+.horror {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.horror li strong {font-size: 20px; color: #90aa8b;}
+.horror li {margin-bottom: 0.5rem;}
+.horror .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.horror-film {width: 90%; margin: 1.5rem auto;}
+.horror-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.horror-list {display: flex; overflow: auto; justify-content: space-around;}
+.horror-list img {width: 100%; height: auto; display: block;}
+.horror-list .title {display: block; font-weight: bold; font-size: 11px;}
+.horror-list .hr-d {display: block; font-size: 8px;}
+
+.horror-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.horror-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.horror-list a:hover::before {opacity: 1;}
+
+.horror-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.horror-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.horror-list img {width: 100%; height: auto; display: block;}
+
+
+
+
+/* genre - romance */
+
+.romance {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.romance li strong {font-size: 20px; color: #90aa8b;}
+.romance li {margin-bottom: 0.5rem;}
+.romance .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.romance-film {width: 90%; margin: 1.5rem auto;}
+.romance-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.romance-list {display: flex; overflow: auto; justify-content: space-around;}
+.romance-list img {width: 100%; height: auto; display: block;}
+.romance-list .title {display: block; font-weight: bold; font-size: 11px;}
+.romance-list .rm-d {display: block; font-size: 8px;}
+
+.romance-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.romance-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.romance-list a:hover::before {opacity: 1;}
+
+.romance-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.romance-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.romance-list img {width: 100%; height: auto; display: block;}
+
+
+
+
+
+/* genre - sf */
+
+.sf {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.sf li strong {font-size: 20px; color: #90aa8b;}
+.sf li {margin-bottom: 0.5rem;}
+.sf .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.sf-film {width: 90%; margin: 1.5rem auto;}
+.sf-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.sf-list {display: flex; overflow: auto; justify-content: space-around;}
+.sf-list img {width: 100%; height: auto; display: block;}
+.sf-list .title {display: block; font-weight: bold; font-size: 11px;}
+.sf-list .sf-d {display: block; font-size: 8px;}
+
+.sf-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.sf-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.sf-list a:hover::before {opacity: 1;}
+
+.sf-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.sf-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.sf-list img {width: 100%; height: auto; display: block;}
+
+
+
+
+
+
+
+/* genre - thriller */
+
+.thriller {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.thriller li strong {font-size: 20px; color: #90aa8b;}
+.thriller li {margin-bottom: 0.5rem;}
+.thriller .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.thriller-film {width: 90%; margin: 1.5rem auto;}
+.thriller-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.thriller-list {display: flex; overflow: auto; justify-content: space-around;}
+.thriller-list img {width: 100%; height: auto; display: block;}
+.thriller-list .title {display: block; font-weight: bold; font-size: 11px;}
+.thriller-list .tr-d {display: block; font-size: 8px;}
+
+.thriller-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.thriller-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.thriller-list a:hover::before {opacity: 1;}
+
+.thriller-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.thriller-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.thriller-list img {width: 100%; height: auto; display: block;}
+
+
+
+
+
+
+/* genre - other */
+
+.other {padding-top: 0.5rem; width: 90%; margin: 1rem auto; border-bottom: 1px solid #aaa; padding-bottom: 1rem;}
+.other li strong {font-size: 20px; color: #90aa8b;}
+.other li {margin-bottom: 0.5rem;}
+.other .txt {font-size: 15px; letter-spacing: 0.5px; text-align: justify;}
+
+.other-film {width: 90%; margin: 1.5rem auto;}
+.other-film h4 {font-weight: bold; font-size: 20px; color: #90aa8b; margin-bottom: 1.5rem;}
+
+
+.other-list {display: flex; overflow: auto; justify-content: space-around;}
+.other-list img {width: 100%; height: auto; display: block;}
+.other-list .title {display: block; font-weight: bold; font-size: 11px;}
+.other-list .dr-d {display: block; font-size: 8px;}
+
+.other-list a {position: relative; display: block; padding: 10px; color: #fff;}
+.other-list a::before {content: ""; position: absolute; left: 0; top: 0; background: rgba(144, 170, 139, 0.6); opacity: 0; transition: 0.4s ease; z-index: 1; width: 100%; height: 100%;}
+.other-list a:hover::before {opacity: 1;}
+
+.other-list .overlay-text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; color: #fff; text-align: center; opacity: 0; transition: 0.6s ease;}
+.overlay-text h4 {color: #fff;}
+
+.other-list a:hover .overlay-text {opacity: 1; transform: translate(-50%, -50%);}
+.other-list img {width: 100%; height: auto; display: block;}
+
+
+
+
+
+
+
+/* footer */
+#footer {width: 100%; height: 150px; background: #90aa8b; padding-bottom: 1.5rem; }
+#footer .footbox {display: flex; gap: 5rem; padding-top: 1rem; justify-content: space-around;}
+#footer .footbox .footmenu {display: flex; gap: 2rem; align-items: start;}
+
+#footer .footlogo {font-weight: bold; padding-left: 5%; font-size: 15px; color: #fff;}
+#footer .f-title {color: #fff; font-size: 13px;}
+
+#footer .f-title li a {color: #fff; font-size: 9px;}
+#footer .f-title li a:hover {background: #fff; color: #90aa8b;}
+
+
+.copyf-title {color: #fff; font-size: 10px;}
+
+
+
+/* scroll bar */
+::-webkit-scrollbar {width: 10px; height: 6px;}
+
+::-webkit-scrollbar-track {background: #f5f5f5; border-radius: 10px;}
+
+::-webkit-scrollbar-thumb {background-color: #90aa8b; border-radius: 10px; border: 1px solid #dcdcdc;}
+
+::-webkit-scrollbar-thumb:hover {background-color: #6f8969;}

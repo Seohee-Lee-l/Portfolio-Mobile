@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile_signup</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="xeicon/css/xeicon.min.css">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <h2><a href="index.php" class="logo">Moogo</a></h2>
+
+        <form action="#" class="search">
+            <input type="text" placeholder="Movie name / Director / Country / Genre ...">
+            <button type="submit"><i class="xi-search"></i></button>
+        </form>        <div class="category">            
+            <ul>
+                <li><a href="#" id="menu-btn">Menu</a></li>
+                <li><a href="list.php">Request</a></li>
+                <!-- <li><?php include "top_login1.php"; ?></li> -->
+
+                <li>
+                    <?php
+                        session_start();
+                        include "top_login1.php";
+                    ?>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <nav class="menu">
+        <ul class="menu1">
+            <a href="#" class="close">Close Menu</a>
+
+            <li>
+                <a href="#" class="menu-t">
+                    Films <i class="xi-angle-down-thin"></i>
+                </a>
+                <ul class="sub">
+                    <li><a href="menu_nowshowing.html">Now Showing</a></li>
+                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="#">Director</a></li>
+                    <li><a href="#">Country / Language</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Genres</a>
+                <a href="#"><i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Thriller</a></li>
+                    <li><a href="#">Romance / Comedy</a></li>
+                    <li><a href="#">Fantasy / SF</a></li>
+                    <li><a href="#">Etc</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="menu-t">Articles / News <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Film Articles</a></li>
+                    <li><a href="#">Film Magazines</a></li>
+                </ul>
+            </li>
+
+            <li class="mypage"><a href="#" class="menu-t">My Page <i class="xi-angle-down-thin"></i></a>
+                <ul class="sub">
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Recommendation</a></li>
+                    <li class="last"><a href="#">My Request</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="signup-container">        
+        <form action="sign_up.php" method="post">
+            <fieldset>
+                <legend>Sign up</legend>
+
+
+                <div class="form-list">
+                    <label for="id">ID (Username)</label>
+
+                    <input type="text" id="id" name="id" placeholder="5 to 10 characters" required minlength="5" maxlength="10">
+                </div>
+
+                <div class="form-list id-check">
+                    <button type="button" class="id-button">Check ID</button>
+                </div>                <div class="form-list">
+                    <label for="pass">Password</label>
+
+                    <input type="password" id="pass" name="pass" placeholder="8 characters or more" required minlength="8">
+                </div>
+
+
+                <div class="form-list">
+                    <label for="pass_confirm">Confirm Password</label>
+
+                    <input type="password" id="pass_confirm" name="pass_confirm" placeholder="8 characters or more" required minlength="8">
+                </div>
+
+                
+
+                <div class="birth-row form-list">
+                    <label for="birth-year" class="sr-only">Birth of Date</label>
+
+                    <div class="birth-list">
+                        <input type="number" name="birth-year" id="birth-year" placeholder="year" required>
+                        <input type="number" name="birth-month" id="birth-month" placeholder="month" required>
+                        <input type="number" name="birth-day" id="birth-day" placeholder="day" required>
+                    </div>
+                </div>    
+ 
+
+
+                <div class="form-list">
+                    <label for="name">Name</label>
+
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>                <div class="form-list">
+                    <label for="hp">Tel</label>
+
+                    <input type="tel" name="hp" id="hp" placeholder="010-0000-0000" maxlength="13" required>
+                </div>
+
+
+
+                <div class="form-list">
+                    <label for="postcode" class="sr-only">Address</label>
+
+                    <div class="address-list">
+                        <input type="text" name="postcode" id="postcode" placeholder="Post code">
+                        <input type="text" name="address" id="address" placeholder="Address">
+                        <input type="text" name="address2" id="address2" placeholder="Address Line 2">
+                    </div>    
+                </div>    
+
+
+
+                <div class="form-list">
+                    <label for="email">E-mail</label>
+
+                    <input type="email" name="email" id="email" placeholder="moogo@gmail.com" required>
+                </div>
+
+
+
+
+
+                <div class="form-wrap">
+                    <div class="agree-check">
+                        <label>
+                            <input type="checkbox" name="promo">
+                            <span class="agree-txt">
+                                Receive weekly personalized film recommendation e-mails
+                            </span>
+                        </label>
+                        <small class="small">주간 맞춤 영화 추천 이메일 받기 (선택)</small>
+                    </div>
+
+                    <div class="agree-check">
+                        <label>
+                            <input type="checkbox" name="privacy" id="privacy" required>
+                            <span class="agree-txt">
+                                Consent to the collection and use of personal information
+                            </span>
+                        </label>
+                        <small class="small">개인정보 수집 동의 (필수)</small>
+                    </div>
+                </div>
+
+
+                <div class="form-list">
+                    <button type="submit" class="join">Join</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+
+    <footer id="footer">
+
+        <div class="footbox">
+            <a href="index.html" class="footlogo">Moogo</a>
+
+            <ul class="footmenu">
+
+                <li class="f-title">Contact
+                    <ul>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=seohee1880@gmail.com" target="_blank">E-mail</a></li>
+                        <li><a href="tel:010-4555-9620">Tel (+82)10 4555 9620</a></li>
+                    </ul>
+                </li>
+
+                <li class="f-title">Sns
+                    <ul>
+                        <li><a href="https://www.instagram.com/vanillaskyexpress" target="_blank">Instagram</a></li>
+                        <li><a href="https://kr.pinterest.com/seohee1880/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://blog.naver.com/sag1880" target="_blank">Blog</a></li>
+                    </ul>
+                </li>
+
+                <li class="copyf-title">&copy; Moogo
+                    <ul>
+                        <li><small class="cr">All Rights Reserved.</small></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>
