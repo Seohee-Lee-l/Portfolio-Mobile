@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="xeicon/css/xeicon.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/2/xeicon.min.css">
 
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/mobile-menu.js"></script>
